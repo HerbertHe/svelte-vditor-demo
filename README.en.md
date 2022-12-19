@@ -2,29 +2,29 @@
 
 [English](./README.en.md) | [简体中文](./README.md)
 
-在Svelte框架使用Vditor的demo, 源码详见 [App.svelte](./src/App.svelte)
+Demo for using Vditor with Svelte, See the source code [here](./src/App.svelte)
 
-## 使用过程
+## Usage
 
-- 使用Svelte官方的举例, 初始化工程
+- initialize the project
 
 ```bash
-# 初始化工程
+# initialize the project
 npx degit sveltejs/template my-svelte-project
 
-# 下载依赖
+# install dependencies
 npm install
 ```
 
-- 修改`public`目录下的`index.html`的`head`标签, 引入Vditor的通用样式
+- modify the `head` element of `public/index.html` file, link the Vditor stylesheet
 
 ```diff
 + <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css"/>
 ```
 
-- 在组件需要的地方引入Vditor
+- import the Vditor at the needed component
 
-示例: `src/App.svelte`
+example: `src/App.svelte`
 
 ```diff
 <script>
@@ -45,5 +45,5 @@ npm install
 </style>
 ```
 
-1. 为Vditor添加挂载DOM
-2. 在`onMount`生命周期引入Vditor初始化
+1. add the mounting element for Vditor
+2. initialize the Vditor instance at the lifecycle `onMount` of the svelte component
